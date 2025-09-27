@@ -1,4 +1,4 @@
-pyspark==2.4.8
+pyspark==3.5.1
 pandas
 streamlit
 matplotlib
