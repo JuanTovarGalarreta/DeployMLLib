@@ -1,4 +1,5 @@
 import sys
+import os
 
 # Set JAVA_HOME if not already set
 if 'JAVA_HOME' not in os.environ:
