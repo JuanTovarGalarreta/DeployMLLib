@@ -1,3 +1,20 @@
+import sys
+
+# Set JAVA_HOME if not already set
+if 'JAVA_HOME' not in os.environ:
+    # Try to find Java installation
+    java_paths = [
+        '/usr/lib/jvm/java-11-openjdk-amd64',
+        '/usr/lib/jvm/java-8-openjdk-amd64',
+        '/opt/java/openjdk',
+        os.path.join(sys.prefix, 'bin')  # For conda environments
+    ]
+    
+    for path in java_paths:
+        if os.path.exists(path):
+            os.environ['JAVA_HOME'] = path
+            break
+
 from pyspark.ml.evaluation import RegressionEvaluator
 from pyspark.ml.regression import DecisionTreeRegressor
 from pyspark.ml.regression import GBTRegressor
