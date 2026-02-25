@@ -1,6 +1,5 @@
 pyspark==3.5.1
 pandas
-streamlit
 matplotlib
 numpy
 setuptools
